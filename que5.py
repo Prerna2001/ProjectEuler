@@ -1,3 +1,6 @@
+#What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+
 import sys
 check_list = [11, 13, 14, 16, 17, 18, 19, 20]
 
@@ -13,3 +16,6 @@ if __name__ == '__main__':
         print ("No answer found")
     else:
         print ("found an answer:", solution)
+        
+        
+  #output: found an answer: 232792560
