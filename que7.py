@@ -1,3 +1,5 @@
+#What is the 10001st prime number?
+
 def isPrime(n):
     if n < 2: return "Neither prime, nor composite"
     for i in range(2, int(n**0.5) + 1):
@@ -17,3 +19,6 @@ def nthPrime(n):
     return prime
 
 print(nthPrime(10001))
+
+
+#Output:104743
