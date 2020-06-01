@@ -1,7 +1,4 @@
-
-
-
-
+#Find the sum of all the primes below two million.
 def isPrime(n):
     if n < 2: return "Neither prime, nor composite"
     for i in range(2, int(n**0.5) + 1):
@@ -17,3 +14,4 @@ for i in range(2, 2000000):
 print (sum)
 
 
+#Output: 142913828922
