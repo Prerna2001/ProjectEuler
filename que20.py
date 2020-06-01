@@ -1,3 +1,5 @@
+#Find the sum of the digits in the number 100!
+
 f=1
 for i in range(1,101):
     f*=i
@@ -8,4 +10,4 @@ for i in f:
     sum+=int(i)
 print(sum)
 
-
+#Output:648
