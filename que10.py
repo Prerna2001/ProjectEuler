@@ -1,17 +1,16 @@
 #Find the sum of all the primes below two million.
-def isPrime(n):
-    if n < 2: return "Neither prime, nor composite"
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+a = 2000000
+numbers = set(range(3, a + 1, 2))
+for number in range(3, int(a ** 0.5) + 1):
+    if number not in numbers:
+        continue
+        num = number
+    while num < a:
+        num += number
+        if num in numbers:
+            numbers.remove(num)
 
-sum = 0
-for i in range(2, 2000000):
-    if isPrime(i):
-        sum += i
-
-print (sum)
+print (2 + sum(numbers))
 
 
 #Output: 142913828922
