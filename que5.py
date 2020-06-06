@@ -1,21 +1,24 @@
 #What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 
-import sys
-check_list = [11, 13, 14, 16, 17, 18, 19, 20]
+listuse = [11, 13, 14, 15, 16, 17, 18, 19]
+prime = [2, 3, 5, 7, 11, 13, 17, 19]
+def isdivisible(num):
+    for i in listuse:
+        if num % i !=0:
+            return False
+    return True
 
-def find_solution(step):
-    for num in range(step, 999999999, step):
-        if all(num % n == 0 for n in check_list):
-            return num
-    return None
+min = 1
+for i in prime:
+    min *= i
+test = min
 
-if __name__ == '__main__':
-    solution = find_solution(20)
-    if solution is None:
-        print ("No answer found")
-    else:
-        print ("found an answer:", solution)
+while True:
+    if isdivisible(min):
+        print(min)
+        break
+    min+=test
         
         
   #output: found an answer: 232792560
