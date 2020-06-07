@@ -10,7 +10,7 @@ def isPrime(n):
 
 def sumofprime(upto):
     sum=2
-    for i in range(7,upto+1,2):
+    for i in range(3,upto+1,2):
         if isPrime(i):
             sum+=i
     return sum
